@@ -5,7 +5,7 @@ dify_api_key = "app-VcJy9Jxc3a7tIWDYk0hmfwiW"
 
 url = "https://api.dify.ai/v1/chat-messages"
 
-st.title("Dify Streamlit App")
+st.title("SASTA CHAT BOT 🤖")
 
 if "conversation_id" not in st.session_state:
     st.session_state.conversation_id = ""
@@ -17,7 +17,7 @@ for message in st.session_state.messages:
     with st.chat_message(message["role"]):
         st.markdown(message["content"])
 
-prompt = st.chat_input("Enter you question")
+prompt = st.chat_input("Jaldi prompt dal 😠")
 
 if prompt:
     with st.chat_message("user"):
@@ -52,7 +52,7 @@ if prompt:
 
         except requests.exceptions.RequestException as e:
             st.error(f"An error occurred: {e}")
-            full_response = "An error occurred while fetching the response."
+            full_response = "KUCH GADBAD HO GAYA HAI BHAI."
 
         message_placeholder.markdown(full_response)
 
